@@ -1,0 +1,40 @@
+.c-link
+	&.\--light-blue
+		color: $light-blue
+
+		&.\--with-arrow
+			+background-image('icons/arrow-right-blue.svg')
+			background-position: right center
+			padding-right: 15px
+			background-size: 9px
+
+	&.\--medium
+		font-size: $medium
+
+	&.\--large
+		font-size: $large
+
+	&.\--inverted
+		color: $inverted-text-color
+
+	&.\--underline
+		text-decoration: underline
+
+	&.\--with-arrow
+		+background-image('icons/arrow-right.svg')
+		background-position: right center
+		padding-right: 15px
+
+	&.\--hover-underline:hover
+		text-decoration: underline
+
+	&.\--hover-highlight:hover
+		color: $light-blue
+
+	&.\--highlight
+		color: $light-blue
+		text-decoration: underline
+
+	&.\--highlight-inverted
+		color: $inverted-text-color
+		text-decoration: underline

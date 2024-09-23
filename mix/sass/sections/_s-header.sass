@@ -1,0 +1,79 @@
+.s-header
+	$height: 100px
+
+	position: absolute
+	width: 100%
+	+z-index(header)
+
+	&__wrapper
+		display: flex
+		align-items: center
+
+		+mobile
+			padding: 20px 0
+
+		+tablet-desktop
+			justify-content: space-between
+			height: $height
+
+	&__hamburger
+		margin-right: 20px
+
+		+tablet-desktop
+			display: none
+
+	&__logo
+		display: block
+		padding: 30px 15px 15px 20px
+		background: white
+		border-radius: 0 0 30px 10px
+		+box-shadow
+
+		+mobile
+			width: 120px
+
+		+tablet-desktop
+			width: 240px
+
+	&__menu
+		+mobile
+			display: none
+
+		+tablet-desktop
+			display: flex
+
+		li
+			position: relative // for .s-account-dropdown
+
+		li + li
+			margin-left: 30px // Distance between menu items
+
+		&-item
+			font-size: $xl
+			font-weight: $semi-bold
+			text-transform: uppercase
+
+			&.\--home
+				padding-left: 30px
+				+background-image('icons/home.svg')
+				background-position: left center
+
+			&.\--account
+				padding-left: 30px
+				+background-image('icons/account.svg')
+				background-position: left center
+
+			&.\--current
+				color: $light-blue
+				position: relative
+
+				&.\--home
+					+background-image('icons/home-light-blue.svg')
+
+				&.\--account
+					+background-image('icons/account-light-blue.svg')
+
+	&.\--with-border
+		position: relative
+		border-bottom: 6px solid $dark-blue
+		background-color: $main-bg-color

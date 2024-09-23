@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Checkbox ON</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-215.000000, -1593.000000)" id="E-mail-Alert" stroke="#004465">
+            <g transform="translate(0.000000, 1401.000000)">
+                <g id="Checkbox-ON" transform="translate(216.000000, 193.000000)">
+                    <rect id="Checkbox-leeg-Copy-6" stroke-width="1.5" fill="#FFFFFF" x="0" y="0" width="15" height="15"></rect>
+                    <line x1="1.5" y1="1.5" x2="13.5" y2="13.5" id="Line" stroke-width="2.5" stroke-linecap="square"></line>
+                    <line x1="13.5" y1="1.5" x2="1.5" y2="13.5" id="Line-2" stroke-width="2.5" stroke-linecap="square"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

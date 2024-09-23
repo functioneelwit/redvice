@@ -1,0 +1,13 @@
+// --------------------------------------------------------------------------
+// Simple background image mixin that adds 'background-repeat: no-repeat' by
+// default, plus it puts the image root folder as default so you can skip
+// that part.
+//
+// Example:
+//
+// +background-image('icons/electricity.svg')
+// --------------------------------------------------------------------------
+
+@mixin background-image($file)
+  background-image: url($template-path + '/images/' + $file)
+  background-repeat: no-repeat

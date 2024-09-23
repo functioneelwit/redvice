@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>streamline-icon-team-share-idea@24x24</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Voor-Werkgevers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Voor-werkgevers" transform="translate(-537.000000, -529.000000)" stroke="#EE008B" stroke-width="2.5">
+            <g id="USPs" transform="translate(-1.000000, 477.000000)">
+                <g id="USP-1-Copy-2" transform="translate(531.000000, 43.000000)">
+                    <g id="Group-2" transform="translate(0.000000, 9.000000)">
+                        <g id="streamline-icon-team-share-idea@24x24" transform="translate(7.000000, 0.000000)">
+                            <line x1="30" y1="1.875" x2="30" y2="5.625" id="Path"></line>
+                            <line x1="11.25" y1="20.625" x2="15.2675" y2="20.625" id="Path"></line>
+                            <line x1="48.75" y1="20.625" x2="44.7325" y2="20.625" id="Path"></line>
+                            <line x1="14.535" y1="8.375" x2="17.9475" y2="11.785" id="Path"></line>
+                            <line x1="45.465" y1="8.375" x2="42.0525" y2="11.785" id="Path"></line>
+                            <path d="M39.3750045,20.625 C39.38,15.4475 35.1875,11.245 30.01,11.2399955 C24.8325,11.235 20.63,15.4275 20.6249915,20.605 C20.62,24.3375 22.83,27.715 26.25,29.2075 L26.25,33.75 L33.75,33.75 L33.75,29.2075 C37.165,27.72 39.3725,24.35 39.3750045,20.625 Z" id="Path"></path>
+                            <line x1="26.25" y1="39.375" x2="33.75" y2="39.375" id="Path"></line>
+                            <path d="M47.565,35.625 C51.19,35.625 54.1275,38.5625 54.1275,42.1875 C54.1275,45.8125 51.19,48.75 47.565,48.75 C43.94,48.75 41.0025,45.8125 41.0025,42.1875 C41.0025,38.5625 43.94,35.625 47.565,35.625 Z" id="Path"></path>
+                            <path d="M58.125,58.125 C56.09,52.2925 49.7125,49.2125 43.88,51.2475 C40.6575,52.37 38.125,54.905 37.0025,58.125" id="Path"></path>
+                            <path d="M12.435,35.625 C16.06,35.625 18.9975,38.5625 18.9975,42.1875 C18.9975,45.8125 16.06,48.75 12.435,48.75 C8.81,48.75 5.8725,45.8125 5.8725,42.1875 C5.8725,38.5625 8.81,35.625 12.435,35.625 Z" id="Path"></path>
+                            <path d="M23,58.125 C20.965,52.2925 14.5875,49.2125 8.755,51.2475 C5.535,52.37 3,54.9025 1.8775,58.125" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

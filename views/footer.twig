@@ -1,0 +1,64 @@
+<footer class="s-footer">
+    <div class="s-footer__main">
+        <div class="l-wrapper">
+            <div class="s-footer__grid">
+                <div>
+                    <h4 class="s-footer__heading u-mb-">Contact</h4>
+                    <p class="s-footer__phone-number">
+                        <a href="tel:+31653769999">Gosse Rodenboog: <br>+31 (0)653769999</a>
+                    </p>
+                    <p class="s-footer__e-mail-address">
+                        <a href="mailto:info@redvice.eu">
+                            info@redvice.eu
+                        </a>
+                    </p>
+                    <br>
+                    <h4 class="s-footer__heading u-mt">Adres</h4>
+                    <p class="u-mb">
+                        Redvice <br>
+                        Stadsweg 91<br>
+                        9791 KC Ten Boer
+                    </p>
+
+                </div>
+                <div>
+                    <h4 class="s-footer__heading u-mb-">Voor werkgevers</h4>
+                    <ul class="s-footer__links">
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                    </ul>
+                    <h4 class="s-footer__heading u-mb- u-mt">
+                        <a href="">Voor kandidaten</a>
+                    </h4>
+                    <ul class="s-footer__links u-mb-">
+                        <li><a href="https://www.foodenagrivacatures.nl/agrarische-vacatures">Agrarische vacatures</a></li>
+                        <li><a href="https://www.foodenagrivacatures.nl/food-vacatures">Food vacatures</a></li>
+                    </ul>
+                    <h4 class="s-footer__heading u-mb- u-mt">Over ons</h4>
+                    <ul class="s-footer__links">
+                        <li><a href="/over-ons">Over ons</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="s-footer__heading u-mb-">Trainingen</h4>
+                    <ul class="s-footer__links u-mb+">
+                        {% for course in courses %}
+                            <li>
+                                <a href="">
+                                    {{ course }}
+                                </a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s-footer__sub">
+        <div class="l-wrapper">
+            <p class="u-text-center">© Copyright 2015 -  Redvice</p>
+        </div>
+    </div>
+</footer>

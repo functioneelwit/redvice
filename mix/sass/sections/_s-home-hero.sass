@@ -1,0 +1,98 @@
+.s-home-hero
+    max-height: 550px
+    min-height: 400px
+    position: relative
+
+    +mobile
+        height: 78vh
+
+    +tablet-desktop
+        height: 35vw
+
+    &__hero
+        background-size: cover
+        +background-image('home-hero.jpg')
+        background-position: center center
+        +fill-space
+
+        +mobile
+            +background-image('home-hero-mobile.jpg')
+
+        +tablet-desktop
+            +background-image('home-hero.jpg')
+
+        &:before
+            +fill-space
+            background-image: linear-gradient(to top, rgba(black, 0.2), rgba(white, 0) 100%)
+            content: ''
+
+    &__slogan-and-job-search
+        position: absolute
+
+        +mobile
+            bottom: 20px
+            width: 100%
+            padding: 20px
+
+        +tablet
+            bottom: 15%
+            right: 20px
+            width: 600px
+
+        +desktop
+            bottom: 15%
+            left: 50%
+            width: 600px
+
+    &__slogan
+        color: $inverted-text-color
+        font-size: 45px
+        line-height: 1
+        font-weight: $semi-bold
+        text-align: center
+
+        +mobile
+            font-size: 35px
+            margin-bottom: 20px
+
+        +tablet-desktop
+            margin-bottom: 10px
+            font-size: 45px
+
+        // jouw
+        span
+            font-weight: $bold
+
+            +mobile
+                font-size: 40px
+
+            +tablet-desktop
+                font-size: 50px
+
+    &__sub-slogan
+        color: $inverted-text-color
+        text-align: center
+        font-weight: $regular
+        margin-bottom: 20px
+
+        +mobile
+            display: none
+
+        +tablet-desktop
+            font-size: $large
+
+    &__job-search
+        grid-template-columns: 1fr auto
+        grid-gap: 30px
+        align-items: center
+
+        +mobile
+            text-align: center
+
+        +tablet-desktop
+            +grid
+
+        .c-link
+            +mobile
+                margin-top: 20px
+                display: inline-block

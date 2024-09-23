@@ -1,0 +1,36 @@
+.c-breadcrumbs
+    padding: 6px 0
+    border-bottom: 1px solid rgba(black, 0.25)
+    font-size: 14px
+
+    a
+        color: $light-blue
+        position: relative
+
+        +mobile
+            padding-left: 15px
+            display: none
+
+        +tablet-desktop
+            padding-right: 15px
+
+        &:after
+            color: rgba(black, 0.5)
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+
+            +mobile
+                content: "<"
+                left: 0
+
+            +tablet-desktop
+                right: 0
+                content: ">"
+
+    a + a
+        display: inline-block
+
+    span
+        +mobile
+            display: none

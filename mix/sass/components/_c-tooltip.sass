@@ -1,0 +1,53 @@
+.c-tooltip
+    cursor: pointer
+    position: relative
+
+    &.\--with-icon
+        +background-image('icons/tooltip.svg')
+        padding-right: 30px
+        background-position: right center
+
+        &.\--inverted
+            +background-image('icons/tooltip-inverted.svg')
+
+    &:after
+        content: attr(aria-label)
+        +z-index(tooltip)
+        font-size: $small
+        font-weight: $regular
+        background-color: $main-bg-color
+        padding: 10px
+        +box-shadow
+        line-height: 1.2
+        white-space: normal
+        text-align: left
+        border-radius: 5px
+        pointer-events: none
+        opacity: 0
+        transition: opacity 0.18s ease-out
+        position: absolute
+        width: 100%
+        min-width: 300px
+        max-width: 300px
+        right: 0
+        color: $main-text-color
+
+    &.\--up
+        &:after
+            bottom: calc(100%)
+
+    &.\--down
+        &:after
+            top: calc(100%)
+
+    &.\--right
+        &:after
+            left: calc(100% + 10px)
+
+    &.\--left
+        &:after
+            right: calc(100% + 10px)
+
+    &:hover
+        &:after
+            opacity: 1

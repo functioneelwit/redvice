@@ -1,0 +1,54 @@
+.s-footer
+	color: $inverted-text-color
+	font-size: $small
+
+	&__main
+		padding: 50px 0
+		background-color: $footer-bg-color
+
+	&__grid
+		+grid
+		grid-gap: 50px
+
+		+tablet
+			grid-template-columns: 1fr 1fr
+
+		+desktop
+			grid-template-columns: 1fr 1fr 1fr
+
+	&__sub
+		background-color: $dark-green
+		padding: 30px 0
+		font-size: $xs
+
+	&__heading
+		font-size: $large
+		font-weight: $semi-bold
+		margin-bottom: 20px
+		color: $footer-accent-color
+		text-transform: uppercase
+
+	&__title
+		text-transform: uppercase
+		font-weight: $semi-bold
+		color: $footer-accent-color
+		font-size: $medium
+
+	&__phone-number,
+	&__e-mail-address
+		background-position: left center
+		padding-left: 35px
+		line-height: 24px
+		font-size: $medium
+
+	&__phone-number
+		+background-image('icons/phone.svg')
+		margin-bottom: 10px
+
+	&__e-mail-address
+		+background-image('icons/e-mail.svg')
+
+	&__links
+		li
+			padding: 5px 0
+			line-height: 1.4

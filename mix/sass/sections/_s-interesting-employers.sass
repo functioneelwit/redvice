@@ -1,0 +1,30 @@
+.s-interesting-employers
+    padding: 50px 0
+
+    &__grid
+        +grid
+        text-align: center
+        grid-gap: 30px
+
+        +tablet
+            grid-template-columns: 1fr 1fr 1fr
+
+        +desktop
+             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+
+    &__logo
+        height: 120px
+        position: relative
+        margin-bottom: 20px
+
+        img
+            +center
+            max-width: 100%
+            max-height: 100%
+
+    &__company
+        font-size: $medium
+        margin-bottom: 20px
+
+        b
+            font-size: $large

@@ -1,0 +1,24 @@
+// Mixin used for mobile devices
+@mixin mobile
+  @media only screen and (max-width: $breakpoint-mobile - 1)
+    @content
+
+// Mixin used for tablets (portrait orientation)
+@mixin tablet
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1)
+    @content
+
+// Mixin used for desktop and big tablets
+@mixin desktop
+  @media only screen and (min-width: $breakpoint-tablet)
+    @content
+
+// Mixin used for mobile devices and tablets (portrait)
+@mixin mobile-tablet
+  @media only screen and (max-width: $breakpoint-tablet - 1)
+    @content
+
+// Mixin used for tablets (portrait), big tablets and desktop
+@mixin tablet-desktop
+  @media only screen and (min-width: $breakpoint-mobile)
+    @content

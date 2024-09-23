@@ -1,0 +1,20 @@
+.c-heading
+    font-weight: $semi-bold
+    line-height: 1
+
+    &.\--medium
+        font-size: $medium
+        color: $light-blue
+
+    &.\--xxxl
+        +mobile
+            font-size: $xxl
+
+        +tablet-desktop
+            font-size: $xxxl
+
+    &.\--inverted
+        color: $inverted-text-color
+
+    &.\--uppercase
+        text-transform: uppercase

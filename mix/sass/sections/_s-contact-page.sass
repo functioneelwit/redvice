@@ -1,0 +1,35 @@
+.s-contact-page
+    padding: 50px 0
+    text-align: center
+    background-color: rgba($lightest-blue, 0.1)
+
+    &__form
+        +box-shadow
+        background-color: $main-bg-color
+        border-radius: 5px
+        padding: 30px
+        margin: 0 auto
+        text-align: left
+
+    &__form-grid
+        +grid
+        grid-gap: 20px 30px
+
+        +tablet-desktop
+            grid-template-columns: auto 1fr
+
+    &__phone-number,
+    &__e-mail-address
+        background-position: left center
+        padding-left: 35px
+        line-height: 24px
+        font-size: $xl
+        text-align: left
+        display: inline-block
+
+    &__phone-number
+        +background-image('icons/phone-blue.svg')
+        margin-right: 20px
+
+    &__e-mail-address
+        +background-image('icons/e-mail-blue.svg')

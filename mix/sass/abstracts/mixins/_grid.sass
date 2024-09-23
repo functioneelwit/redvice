@@ -1,0 +1,8 @@
+@mixin grid
+    display: grid
+
+    +ie
+        display: flex
+
+        > *
+            padding-right: 30px

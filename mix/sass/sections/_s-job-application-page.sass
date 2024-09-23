@@ -1,0 +1,23 @@
+.s-job-application-page
+    padding: 50px 0
+    background-color: rgba($lightest-blue, 0.1)
+
+    .s-job-application-page__grid
+        +grid
+        grid-gap: 20px 30px
+        grid-template-columns: 278px 1fr
+
+    &__form
+        +box-shadow
+        background-color: $main-bg-color
+        border-radius: 5px
+        padding: 30px
+        margin: 0 auto
+        text-align: left
+
+    &__form-grid
+        +grid
+        grid-gap: 20px 30px
+
+        +tablet-desktop
+            grid-template-columns: auto 1fr

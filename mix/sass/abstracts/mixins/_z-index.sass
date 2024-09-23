@@ -1,0 +1,19 @@
+//----------------------------------------------------------
+// Z-index variables
+//
+// Always use this mixin when you are declaring a z-index.
+// Never just use a static value.
+//
+// Example:
+// .modal
+//   +z-index(modal)
+//
+//
+// This idea is inspired by:
+// https://www.smashingmagazine.com/2014/06/sassy-z-index-management-for-complex-layouts/
+//----------------------------------------------------------
+
+$z-index-elements: (header, backdrop, mobile-menu, mobile-account-dropdown, tooltip)
+
+@mixin z-index($element)
+  z-index: 1000 + index($z-index-elements, $element) * 10

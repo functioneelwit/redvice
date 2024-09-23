@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="48px" viewBox="0 0 60 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>employee2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="employee2" transform="translate(1.000000, 1.000000)" stroke="#00ADEE" stroke-width="2.5">
+            <line x1="5.9575" y1="45.5" x2="52.8325" y2="0.5" id="Path"></line>
+            <path d="M21.41,40.6275 C23.8675,41.39 26.4275,41.77 29,41.75 C39.25,41.9225 49.645,34.7175 56.06,27.6575 C57.485,26.075 57.485,23.675 56.06,22.0925 C53.735,19.5425 51.1625,17.235 48.375,15.2" id="Path"></path>
+            <path d="M35.0325,8.705 C33.06,8.215 31.0325,7.9775 29,8 C18.9225,7.8325 8.5,14.88 1.9475,22.0875 C0.5225,23.67 0.5225,26.07 1.9475,27.6525 C3.94,29.8325 6.115,31.84 8.4475,33.6525" id="Path"></path>
+            <path d="M19.6249989,24.875 C19.6225,19.6975 23.8175,15.5025 28.995,15.5 C28.9975,15.5 28.9975,15.5 29,15.5" id="Path"></path>
+            <path d="M38.3750011,24.8725 L38.3750011,24.8725 C38.3775,30.05 34.18,34.2475 29.0025,34.25 C29.0025,34.25 29,34.25 29,34.25" id="Path"></path>
+        </g>
+    </g>
+</svg>

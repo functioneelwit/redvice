@@ -1,0 +1,21 @@
+.c-truncated-paragraph
+    display: flex
+
+    > div
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        height: 23px
+
+    button
+        white-space: nowrap
+        font-size: inherit
+        color: $light-blue
+
+    &.\--expanded
+        display: block
+
+        > div
+            white-space: normal
+            display: inline
+

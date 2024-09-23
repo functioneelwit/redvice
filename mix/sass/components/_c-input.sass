@@ -1,0 +1,23 @@
+.c-input
+    display: inline-block
+    background-color: $input-bg-color
+    border: 0
+    width: 100%
+    padding-left: 10px
+    border-radius: 5px
+
+    &.\--small
+        height: 40px
+        font-size: $medium
+
+    &.--large
+        height: 50px
+        font-size: $large
+
+    &.--hidden-file-input
+        position: absolute
+        overflow: hidden
+        width: 0
+        height: 0
+        opacity: 0
+        z-index: -1

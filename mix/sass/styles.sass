@@ -1,0 +1,106 @@
+@charset 'UTF-8'
+
+// ----------------------------------------------------------------------------
+// Every global variable, function and mixin should be put in here. The rule
+// of thumb for this folder is that it should not output a single line of CSS
+// when compiled on its own.
+// ----------------------------------------------------------------------------
+
+@import 'abstracts/variables/variables'
+@import 'abstracts/mixins/background-image'
+@import 'abstracts/mixins/box-shadow'
+@import 'abstracts/mixins/browser-queries'
+@import 'abstracts/mixins/center'
+@import 'abstracts/mixins/fill-space'
+@import 'abstracts/mixins/grid'
+@import 'abstracts/mixins/media-queries'
+@import 'abstracts/mixins/padding'
+@import 'abstracts/mixins/z-index'
+
+// ----------------------------------------------------------------------------
+// The base folder contains reset styles as well as global rules. For example
+// top-level HTML tags like p, h1, h2, ul etc.
+// ----------------------------------------------------------------------------
+
+@import 'base/reset'
+// ----------------------------------------------------------------------------
+// The layout folder contains classes that influence layout, for example a
+// grid or a wrapper. They are similar to utilities, but where utilities do
+// 'something' with a component, layout classes control the layout of the
+// page on a higher level.
+// ----------------------------------------------------------------------------
+
+@import 'layout/l-flex'
+@import 'layout/l-wrapper'
+// ----------------------------------------------------------------------------
+// The components folder is where our reusable components (e.g. buttons, icons,
+// tooltips etc) are located. It should be styled in such a way that it is
+// reusable at different positions, on different pages, and in various
+// situations. All components should be namespaced with `c-`, like
+// `.c-button`
+// ----------------------------------------------------------------------------
+
+// @import all files in the components directory
+
+@import 'components/_c-alert'
+@import 'components/_c-blog-card'
+@import 'components/_c-breadcrumbs'
+@import 'components/_c-button'
+@import 'components/_c-card'
+@import 'components/_c-checkbox'
+@import 'components/_c-columns'
+@import 'components/_c-employer-cover-photo'
+@import 'components/_c-employer-logo'
+@import 'components/_c-error'
+@import 'components/_c-filters'
+@import 'components/_c-form'
+@import 'components/_c-heading'
+@import 'components/_c-hidden-file-input'
+@import 'components/_c-input'
+@import 'components/_c-link'
+@import 'components/_c-list'
+@import 'components/_c-paragraph'
+@import 'components/_c-search'
+@import 'components/_c-spec-list'
+@import 'components/_c-switch'
+@import 'components/_c-table'
+@import 'components/_c-tag'
+@import 'components/_c-textarea'
+@import 'components/_c-textarea-terms'
+@import 'components/_c-tooltip'
+@import 'components/_c-truncated-paragraph'
+@import 'components/_c-usps'
+
+@import 'node_modules/summernote/dist/summernote-lite'
+
+// ----------------------------------------------------------------------------
+// Certain CSS properties and patterns are used frequently. For example:
+// margins, paddings, floats, vertical alignment, text truncation, hiding
+// elements for mobile devices etc. Relying on utilities can help to reduce
+// repetition and provide consistent implementations. Use sparingly! Utilities
+// should be namespaced with `u-`, like `.u-text--center`.
+// ----------------------------------------------------------------------------
+
+@import 'sections/_s-blogs'
+@import 'sections/_s-contact-page'
+@import 'sections/_s-footer'
+@import 'sections/_s-header'
+@import 'sections/_s-home-hero'
+@import 'sections/_s-interesting-employers'
+@import 'sections/_s-job-application-page'
+@import 'sections/_s-jobs'
+@import 'sections/_s-latest-job-posts'
+@import 'sections/_s-mobile-menu'
+
+@import 'utilities/_u-border-radius'
+@import 'utilities/_u-hide'
+@import 'utilities/_u-margin'
+@import 'utilities/_u-padding'
+@import 'utilities/_u-pos'
+@import 'utilities/_u-text'
+
+// ----------------------------------------------------------------------------
+// The specifics folder is where non-reusable elements reside.
+// ----------------------------------------------------------------------------
+
+@import 'specifics/_grecaptcha-badge'

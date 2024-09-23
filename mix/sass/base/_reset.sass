@@ -1,0 +1,88 @@
+// Some basic resetting... The approach we use is that elements do not have
+// any margin or padding by default, until explicitly set otherwise. This
+// promotes a more logical and predictable code base.
+*,
+*::before,
+*::after
+  box-sizing: border-box // This forces padding to not affect height or width of an element
+  margin: 0
+  padding: 0
+
+
+/**
+ * Fix fonts that render as bold in Firefox
+ *
+ * Put this near the top of your style.css
+ * Before any overriding styles
+ */
+
+html
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  font-weight: 400
+  scroll-behavior: smooth
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix()
+  body
+    font-weight: lighter !important
+
+\:root
+  -webkit-font-smoothing: antialiased
+
+html,
+body
+  position: relative
+  overflow-x: hidden
+  font-weight: $regular
+
+body
+  -webkit-overflow-scrolling: touch
+  background-color: $main-bg-color
+  letter-spacing: 0.2px
+  color: $main-text-color
+
+html,
+body,
+input,
+button
+  font-family: Poppins, Arial
+
+a
+  // outline: none
+  text-decoration: none
+  color: inherit
+
+ul
+  li
+    list-style: none
+
+// Remove up/down arrows on input[type='number']'s
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+button
+  border: 0
+  background-color: transparent
+  cursor: pointer
+
+  &:focus
+    outline: none
+
+h1,
+h2,
+h3,
+h4,
+b,
+strong
+  font-weight: $semi-bold
+
+[v-cloak]
+  display: none
+

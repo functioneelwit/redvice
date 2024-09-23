@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>streamline-icon-time-clock-circle-1@24x24</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Vacatures" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-759.000000, -429.000000)" id="Vacature" stroke="#EE008B" stroke-width="1.5">
+            <g transform="translate(427.000000, 345.000000)">
+                <g>
+                    <g id="streamline-icon-time-clock-circle-1@24x24" transform="translate(333.000000, 85.000000)">
+                        <path d="M12,0.545454545 C18.3261818,0.545454545 23.4545455,5.67381818 23.4545455,12 C23.4545455,18.3261818 18.3261818,23.4545455 12,23.4545455 C5.67381818,23.4545455 0.545454545,18.3261818 0.545454545,12 C0.545454545,5.67381818 5.67381818,0.545454545 12,0.545454545 Z" id="Path"></path>
+                        <path d="M12,10.3636364 C12.9032727,10.3636364 13.6363636,11.0967273 13.6363636,12 C13.6363636,12.9032727 12.9032727,13.6363636 12,13.6363636 C11.0967273,13.6363636 10.3636364,12.9032727 10.3636364,12 C10.3636364,11.0967273 11.0967273,10.3636364 12,10.3636364 Z" id="Path"></path>
+                        <line x1="12" y1="10.3636364" x2="12" y2="4.63636364" id="Path"></line>
+                        <line x1="13.1574545" y1="13.1574545" x2="16.0909091" y2="16.0909091" id="Path"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

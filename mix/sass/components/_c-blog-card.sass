@@ -1,0 +1,33 @@
+.c-blog-card
+    +box-shadow
+    border-radius: 5px
+    background-color: $main-bg-color
+    overflow: hidden
+
+    &:hover
+        +box-shadow-hard
+
+    &__image
+        height: 0
+        padding-top: 56%
+        position: relative
+        overflow: hidden
+
+        img
+            max-width: 100%
+            +center
+
+    &__date,
+    &__title
+        padding-left: 20px
+        padding-right: 20px
+
+    &__date
+        padding-top: 10px
+        font-size: $small
+        color: rgba(black, 0.6)
+
+    &__title
+        padding-bottom: 20px
+        font-size: $large
+        font-weight: $semi-bold

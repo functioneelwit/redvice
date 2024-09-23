@@ -1,0 +1,49 @@
+.s-mobile-menu
+	position: fixed
+	background-color: $light-blue
+	top: 0
+	left: 0
+	border-radius: 0 0 5px 0
+	padding: 70px 0 0 0
+	+z-index(mobile-menu)
+	+box-shadow
+	transform: translate(-100%, -100%)
+	transition: transform 0.2s ease-out
+
+	+tablet-desktop
+		display: none
+
+	&.\--enabled
+		transform: translate(0, 0)
+
+	&__link
+		display: block
+		width: 100%
+		text-align: left
+		color: $inverted-text-color
+		padding: 15px 40px
+		border-top: 1px solid rgba(white, 0.2)
+		font-size: $large
+		text-transform: uppercase
+		font-weight: $semi-bold
+
+		&.\--account
+			+background-image('icons/account-lightest-blue.svg')
+			background-position: left 40px center
+			padding-left: 70px
+
+	&__close
+		position: absolute
+		right: 20px
+		top: 20px
+		height: 30px
+		width: 30px
+		padding: 5px
+
+		img
+			height: 100%
+
+	&__backdrop
+		+z-index(backdrop)
+		+fill-space
+		background-color: rgba(black, 0.5)

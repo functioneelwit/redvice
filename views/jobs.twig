@@ -1,0 +1,32 @@
+<div class="s-latest-job-posts">
+    <div class="l-wrapper --medium">
+        <h2 class="c-heading --xxxl --inverted u-mb u-text-center">
+            De meest recente vacatures
+        </h2>
+        <div class="s-latest-job-posts__box">
+            {% for employer in employers %}
+                <a href="route">
+                    <div>
+                        <h3 class="s-latest-job-posts__title">
+                            Name
+                        </h3>
+                    </div>
+                    <div>
+                        <p class="s-latest-job-posts__company">
+                            <b>
+                                Company
+                            </b>
+                            Region
+                        </p>
+                    </div>
+                    <div class="s-latest-job-posts__link">
+                        <img loading="lazy" src="{{ '/icons/arrow-right-blue.svg' }}">
+                    </div>
+                </a>
+            {% endfor %}
+            <div class="u-text-center u-p-">
+                <a href="/vacatures" class="c-link --large --with-arrow --light-blue">Bekijk alle vacatures</a>
+            </div>
+        </div>
+    </div>
+</div>

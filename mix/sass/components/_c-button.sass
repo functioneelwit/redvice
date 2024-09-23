@@ -1,0 +1,50 @@
+.c-button
+	display: inline-block
+	padding: 0 30px
+	text-transform: uppercase
+	font-weight: $semi-bold
+	border-radius: 5px
+	text-align: center
+	line-height: 1.2
+
+	&:active
+		transform: translateY(1px)
+
+	// Sizes
+	&.\--small
+		height: 40px
+		line-height: 40px
+		font-size: $medium
+
+	&.\--large
+		padding: 15px 20px
+		font-size: $large
+
+	&.\--full-width
+		width: 100%
+
+	// Colors
+	&.\--orange
+		background-color: $orange
+		color: $inverted-text-color
+
+	&.\--dark-blue
+		background-color: $dark-blue
+		color: $inverted-text-color
+
+	&.\--green
+		background-color: $green
+		color: $inverted-text-color
+
+	&.\--red
+		background-color: $red
+		color: $inverted-text-color
+
+	&.\--border
+		border: 2px solid rgba(black, 0.85)
+		color: inherit
+
+	&.\--with-checked-icon
+		background-color: $pink
+		background-position: 15px center
+		+background-image('icons/checkmark-white.svg')

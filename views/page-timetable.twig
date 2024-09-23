@@ -1,0 +1,441 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<style>
+		th:first-child, td:first-child {
+			position: sticky;
+			left: 0;
+			z-index: 1;
+		}
+
+		.fixed-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			text-align: center;
+			width: 100vw;
+			padding: 20px 0;
+		}
+
+		.fixed-container-footer {
+			position: fixed;
+			left: 0;
+			z-index: 1;
+			text-align: center;
+			width: 100vw;
+		}
+
+		h1 {
+			font-size: 5em;
+			margin: 0;
+			padding: 0;
+		}
+
+		body, html {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.1em;
+			color: black;
+			background: #1DB04E;
+		}
+
+		.bg {
+			top: 0;
+			left: 0;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-image: url("/wp-content/themes/wsf-2024/images/time-table-bg.png");
+			background-size: cover;
+			background-repeat: repeat-y;
+			overflow: hidden;
+			z-index: 0;
+		}
+
+		table a {
+			color: black;
+			text-decoration: none;
+			padding: 12px 10px 12px 10px;
+			display: block;
+			text-align: left;
+			white-space: nowrap;
+		}
+
+		table td.black {
+			background: black;
+			color: white;
+		}
+
+		table td.white {
+			background: white;
+			color: black;
+		}
+
+		table .black a {
+			color: white;
+			letter-spacing: .5px;
+		}
+		table .white a{
+			color: black;
+			letter-spacing: .5px;
+		}
+
+		body.page article {
+			max-width: 100%;
+		}
+
+		table {
+			text-transform: uppercase;
+			border-spacing: 0;
+			border-collapse: separate;
+			text-align: left;
+			position: relative;
+			line-height: .9em;
+			margin-top: 40px;
+			left: -2px;
+		}
+
+		table th:first-child {
+			border: none;
+			background: transparent !important;
+			text-align: left;
+		}
+
+		table th:first-child {
+			min-width: 8vw;
+		}
+
+		th.current-time {
+			position: relative;
+			font-weight: bold !important;
+			border: 2px solid black;
+		}
+
+		th.current-time:before {
+			content: "NOW!";
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+
+		td.current-time {
+			background: white;
+			opacity: .3;
+		}
+
+		h2 {timetable
+			font-size: 10em;
+			font-family: "sl";
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			-webkit-text-stroke: 1px black; /* width and color */
+			color: white;
+			position: relative;
+			z-index: 3;
+			margin: 0;
+			text-align: left;
+			margin-left: 10vw;
+		}
+
+		@media only screen and (max-width: 800px) { h2 { font-size: 6em; }}
+		@media only screen and (max-width: 600px) { h2 { font-size: 4em; }}
+
+		@media only screen and (max-width: 1000px) {
+			.content {
+				width: 100vw;
+				overflow-x: scroll;
+				overflow-y: hidden;
+				padding: 0 0 0 100px;
+				height: 75vh;
+				max-height: 75vh;
+				text-overflow: ellipsis;
+			}
+		}
+		.location {
+			left: -1px;
+			/*compensate for top border*/
+			padding: 10px 10px 10px 11px;
+			background: #A8C5CC;
+			text-align: left;
+			white-space: nowrap;
+		}
+
+		.location.black {
+			color: white;
+			background: black;
+		}
+		.location.high {
+			padding-top: 18px !important;
+			padding-bottom: 16px !important;
+		}
+
+		th {
+			font-weight: normal;
+			width: 4vw;
+			color: black;
+			background: white;
+			text-align: center;
+			padding: 10px 10px 8px 10px;
+		}
+
+		th:nth-child(even) {
+			color: white;
+			background: black;
+		}
+
+	</style>
+
+	<div class="fixed-container">
+		<h1>timetable</h1>
+	</div>
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<table style="width: 100%">
+				<tr>
+					<th></th>
+					<th class="time-1915">19:15</th>
+					<th class="time-1930">19:30</th>
+					<th class="time-1945">19:45</th>
+					<th class="time-2000">20:00</th>
+					<th class="time-2015">20:15</th>
+					<th class="time-2030">20:30</th>
+					<th class="time-2045">20:45</th>
+					<th class="time-2100">21:00</th>
+					<th class="time-2115">21:15</th>
+					<th class="time-2130">21:30</th>
+					<th class="time-2145">21:45</th>
+					<th class="time-2200">22:00</th>
+					<th class="time-2215">22:15</th>
+					<th class="time-2230">22:30</th>
+					<th class="time-2245">22:45</th>
+					<th class="time-2300">23:00</th>
+					<th class="time-2315">23:15</th>
+					<th class="time-2330">23:30</th>
+					<th class="time-2345">23:45</th>
+					<th class="time-0000">00:00</th>
+					<th class="time-0015">00:15</th>
+					<th class="time-0030">00:30</th>
+					<th class="time-0045">00:45</th>
+					<th class="time-0100">01:00</th>
+				</tr>
+				<tr>
+					<td><span class="location black high">Pub 69</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td colspan="3" class="black"><a href="/act/ontaard">Ontaard</a></td>
+					<td class="time-2100"></td>
+					<td class="time-2115"></td>
+					<td class="time-2130"></td>
+					<td colspan="3" class="black"><a href="/act/ter-ziele">Ter Ziele</a></td>
+					<td class="time-2230"></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td colspan="2" class="black"><a href="/act/suffering-quota">Suffering<br>Quota</a></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td class="time-0015"></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-0100"></td>
+				</tr>
+				<tr>
+					<td><span class="location">De Hoogte klein</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td class="time-2015"></td>
+					<td class="time-2030"></td>
+					<td colspan="2" class="white"><a href="/act/waterschade">Waterschade</a></td>
+					<td class="time-2115"></td>
+					<td class="time-2130"></td>
+					<td class="time-2145"></td>
+					<td class="time-2200"></td>
+					<td colspan="2" class="white"><a href="/act/inside-job">Inside Job</a></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td class="time-2315"></td>
+					<td class="time-2330"></td>
+					<td colspan="2" class="white"><a href="/act/m-u-g">M.U.G.</a></td>
+					<td class="time-0015"></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-0100"></td>
+				</tr>
+				<tr>
+					<td><span class="location black">De Hoogte groot</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td class="time-2015"></td>
+					<td class="time-2030"></td>
+					<td class="time-2045"></td>
+					<td class="time-2100"></td>
+					<td colspan="2" class="black"><a href="/act/librarycard">Librarycard</a></td>
+					<td class="time-2145"></td>
+					<td class="time-2200"></td>
+					<td class="time-2215"></td>
+					<td class="time-2230"></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td class="time-2315"></td>
+					<td class="time-2330"></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td colspan="3" class="black"><a href="/act/lewsberg">Lewsberg</a></td>
+					<td class="time-1000"></td>
+				</tr>
+				<tr>
+					<td><span class="location high">J&A</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td class="time-2015"></td>
+					<td class="time-2030"></td>
+					<td colspan="2" class="white"><a href="/act/autorijdend-nederland">Autorijdend<br>Nederland</a></td>
+					<td class="time-2115"></td>
+					<td class="time-2130"></td>
+					<td class="time-2145"></td>
+					<td class="time-2200"></td>
+					<td class="time-2215"></td>
+					<td class="time-2230"></td>
+					<td colspan="2" class="white"><a href="/act/ac-berkheimer">AC Berkheimer</a></td>
+					<td class="time-2315"></td>
+					<td class="time-2330"></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td class="time-0015"></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-1000"></td>
+				</tr>
+				<tr>
+					<td><span class="location black high">Hunsingo</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td class="time-2015"></td>
+					<td class="time-2030"></td>
+					<td class="time-2045"></td>
+					<td class="time-2100"></td>
+					<td class="time-2115"></td>
+					<td class="time-2130"></td>
+					<td colspan="2" class="black"><a href="/act/waterbolk">Waterbolk</a></td>
+					<td class="time-2215"></td>
+					<td class="time-2230"></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td colspan="2" class="black"><a href="/act/the-krontjong-devils">The Kront-<br>jong Devils</a></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td class="time-0015"></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-1000"></td>
+				</tr>
+				<tr>
+					<td><span class="location">De Kleine Karper</span></td>
+					<td class="time-1915"></td>
+					<td colspan="8" class="white"><a href="#">Vin Natuur Wijnen</a></td>
+					<td colspan="8" class="black"><a href="#">Grondel Cocktails</a></td>
+					<td colspan="4" class="white"><a href="#">The RalfenatorX</a></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-1000"></td>
+				</tr>
+				<tr>
+					<td><span class="location black high">The Jolly Cat</span></td>
+					<td class="time-1915"></td>
+					<td class="time-1930"></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td colspan="2" class="black"><a href="/act/ultimate-crumpets">Ultimate<br>Crumpets</a></td>
+					<td class="time-2045"></td>
+					<td class="time-2100"></td>
+					<td class="time-2115"></td>
+					<td class="time-2130"></td>
+					<td class="time-2145"></td>
+					<td class="time-2200"></td>
+					<td colspan="2" class="black"><a href="/act/dishes">Dishes</a></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td class="time-2315"></td>
+					<td class="time-2330"></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td colspan="3" class="black"><a href="/act/paracetamol">Paracetamøl</a></td>
+					<td class="time-1000"></td>
+				</tr>
+				<tr>
+					<td><span class="location">The Green Cat</span></td>
+					<td colspan="2" class="white"><a href="/act/vanity-box">Vanity box</a></td>
+					<td class="time-1945"></td>
+					<td class="time-2000"></td>
+					<td class="time-2015"></td>
+					<td class="time-2030"></td>
+					<td class="time-2045"></td>
+					<td class="time-2100"></td>
+					<td colspan="2" class="white"><a href="/act/colds">Colds</a></td>
+					<td class="time-2145"></td>
+					<td class="time-2200"></td>
+					<td class="time-2215"></td>
+					<td class="time-2230"></td>
+					<td class="time-2245"></td>
+					<td class="time-2300"></td>
+					<td colspan="2" class="white"><a href="/act/naive-set">Naive Set</a></td>
+					<td class="time-2345"></td>
+					<td class="time-0000"></td>
+					<td class="time-0015"></td>
+					<td class="time-0030"></td>
+					<td class="time-0045"></td>
+					<td class="time-1000"></td>
+				</tr>
+			</table>
+		</article>
+
+		<div class="fixed-container-footer">
+			<a href="/">
+			<img src="{{ site.theme.link }}/images/logo-alt-black.svg" class="footer-logo">
+			</a>
+		</div>
+
+	</div><!-- /content-wrapper -->
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+			var now = new Date();
+			var hours = now.getHours() + 10;
+			var minutes = now.getMinutes();
+			// get the closest past time in 15 minute intervals so 19:07 becomes 19:00
+			// and 19:23 becomes 19:15
+			var time = (hours * 100 + Math.floor(minutes / 15) * 15).toString().padStart(4, '0');
+			console.log(time);
+		if (document.querySelector('.time-' + time)) {
+			// get all elements with class time-xxxx and add class current-time
+			var elements = document.querySelectorAll('.time-' + time);
+			console.log(elements);
+			elements.forEach(function(element) {
+				element.classList.add('current-time');
+			});
+
+			// wait a few seconds and then scroll the window horizontaly so the th with the current time is centered
+			setTimeout(function() {
+				var current = document.querySelector('th.current-time');
+				var offset = current.offsetLeft - window.innerWidth / 2 + current.offsetWidth / 2;
+				// scroll the body to the current time
+				document.querySelector('body').scrollLeft = offset;
+			}, 1000);
+
+		}
+		});
+	</script>
+{% endblock %}

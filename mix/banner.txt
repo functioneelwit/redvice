@@ -1,0 +1,5 @@
+/*
+ * Theme Name: Redvice 2024
+ * Description: Redvice 2024
+ * Author: Mattijs Wit
+*/

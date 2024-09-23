@@ -1,0 +1,31 @@
+.c-usps
+	padding: 50px 0
+	+grid
+	grid-gap: 30px
+
+	+ie
+		> *
+			width: 50%
+
+	&.\--home
+		+tablet-desktop
+			grid-template-columns: 1fr 1fr
+
+	&.\--employer
+		+tablet-desktop
+			grid-template-columns: 1fr 1fr 1fr
+	&__usp
+		+grid
+		grid-template-columns: auto 1fr
+		grid-gap: 30px
+
+	&__heading
+		margin-bottom: 15px
+		margin-top: -8px // to compensate for space above heading
+		line-height: 1.2
+
+		+mobile
+			font-size: $xl
+
+		+tablet-desktop
+			font-size: $xxl

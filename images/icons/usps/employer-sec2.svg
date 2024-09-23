@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>streamline-icon-house-1@24x24</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Voor-Werkgevers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Voor-werkgevers" transform="translate(-588.000000, -2554.000000)" stroke="#EE008B" stroke-width="2.5">
+            <g id="Werkgevers-numbers" transform="translate(-1.000000, 2554.000000)">
+                <g id="streamline-icon-house-1@24x24" transform="translate(589.000000, 0.000000)">
+                    <path d="M9.375,45 L9.375,54.375 C9.375,56.445 11.055,58.125 13.125,58.125 L24.375,58.125 L24.375,43.125 C24.375,41.055 26.055,39.375 28.125,39.375 L31.875,39.375 C33.945,39.375 35.625,41.055 35.625,43.125 L35.625,58.125 L46.875,58.125 C48.945,58.125 50.625,56.445 50.625,54.375 L50.625,45" id="Path"></path>
+                    <path d="M1.875,41.25 L27.3475,15.7775 C28.8125,14.3125 31.185,14.3125 32.65,15.775 C32.65,15.775 32.65,15.775 32.6525,15.7775 L58.125,41.25" id="Path"></path>
+                    <polyline id="Path" points="41.25 24.375 41.25 20.625 50.625 20.625 50.625 33.75"></polyline>
+                    <path d="M42.805,1.875 L41.7875,3.2325 C40.94,4.3425 41.115,5.925 42.1875,6.8225 L42.1875,6.8225 C43.26,7.72 43.435,9.3025 42.5875,10.4125 L41.57,11.77" id="Path"></path>
+                    <path d="M52.18,1.875 L51.1625,3.2325 C50.315,4.3425 50.49,5.925 51.5625,6.8225 L51.5625,6.8225 C52.635,7.72 52.81,9.3025 51.9625,10.4125 L50.945,11.77" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

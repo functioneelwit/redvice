@@ -1,0 +1,39 @@
+.s-latest-job-posts
+	padding: 50px 0
+	background-color: $dark-green
+
+	&__box
+		+box-shadow
+		background-color: $main-bg-color
+		border-radius: 5px
+		overflow: hidden
+
+	&__post
+		padding: 10px 20px
+		+grid
+		align-items: center
+		grid-gap: 20px
+		border-bottom: 1px solid rgba(black, 0.2)
+
+		+tablet-desktop
+			height: 62px
+			grid-template-columns: 1fr auto auto
+
+		+ie
+			justify-content: space-between
+
+		&.\--boost
+			background-color: $boost-bg-color
+
+	&__title
+		font-size: $large
+
+	&__company
+		font-size: $medium
+
+	&__link
+		+mobile
+			display: none
+
+		img
+			display: block
