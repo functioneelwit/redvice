@@ -156,19 +156,23 @@ strong {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.c-blog-card__date, .c-blog-card__title {
+.c-blog-card__date, .c-blog-card__description, .c-blog-card__title {
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 14px;
 }
 .c-blog-card__date {
   padding-top: 10px;
-  font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
 .c-blog-card__title {
-  padding-bottom: 20px;
+  padding-top: 10px;
   font-size: 18px;
   font-weight: 600;
+}
+.c-blog-card__description {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .c-breadcrumbs {
