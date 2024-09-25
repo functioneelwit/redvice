@@ -1,10 +1,10 @@
 {
-    "key": "ui_options_page_664dff0a5864e",
+    "key": "ui_options_page_66f3ce1038635",
     "title": "Opties",
     "active": true,
     "menu_order": 0,
     "page_title": "Opties",
-    "menu_slug": "options",
+    "menu_slug": "opties",
     "parent_slug": "none",
     "advanced_configuration": 0,
     "icon_url": "",
@@ -18,5 +18,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1716388044
+    "modified": 1727254049
 }

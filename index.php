@@ -13,22 +13,3 @@
  * @since   Timber 0.1
  */
 
-$context          = Timber::context();
-$context['clients'] = Timber::get_posts([
-    'post_type' => 'client',
-    'posts_per_page' => 6,
-]);
-$context['courses'] = Timber::get_posts([
-    'post_type' => 'course',
-    'posts_per_page' => 6,
-]);
-
-$context['options'] = get_fields('options');
-
-$templates        = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift($templates, 'front-page.twig', 'home.twig');
- 
-}
-
-Timber::render($templates, $context);

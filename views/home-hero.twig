@@ -2,14 +2,14 @@
     <div class="s-home-hero__hero" style="background-image: url({{ theme.uri }}/images/home-hero.jpg")></div>
     <div class="s-home-hero__slogan-and-job-search">
         <p class="s-home-hero__slogan">
-            Word een bedrijf dat <span>kandidaten</span> trekt!
+            {{ post.header.title }}
         </p>
 
-        <h1 class="s-home-hero__sub-slogan">Meest aantrekkelijke werkgever in je branche worden?</h1>
+        <h1 class="s-home-hero__sub-slogan">{{ post.header.caption }}</h1>
 
         <div class="s-home-hero__job-search">
 
-                <a href="contact" class="c-button --large --orange">Neem contact met ons op!</a>
+                <a href="{{ post.header.link }}" class="c-button --large --orange">{{ post.header.button_text }}</a>
 
         </div>
     </div>
@@ -19,33 +19,14 @@
         <li class="c-usps__usp">
             <div></div>
             <div>
-                <h2 class="c-usps__heading">Redvice</h2>
-                <p class="c-paragraph --medium u-mb">Heb je het gevoel dat je kansen mist?</p>
-                <p class="c-paragraph --medium u-mb">Wil je verder kijken, dan het bedrijf waar je nu zit?</p>
-                <p class="c-paragraph --medium u-mb">Geef je op voor de selecte groep van kandidaten uit de branche die we op de hoogte houden van vacatures en onder de aandacht brengen bij bedrijven. Volg zelf ook (anoniem) bedrijven en geeft ze de kans om ook jou (anoniem) te benaderen.</p>
-
+                {{ post.homepage_text_1 }}
             </div>
         </li>
 
         <li class="c-usps__usp">
             <div></div>
             <div>
-                <h2 class="c-usps__heading">Direct je vacatures invullen!</h2>
-                <p class="c-paragraph --medium u-mb">
-                    Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-
-                <p class="c-paragraph --medium u-mb">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                <p class="c-paragraph --medium u-mb">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-
-                <a href="#email-alert" class="c-button --orange --large">
-                    Ja, neem contact met mij op
-                </a>
+                {{ post.homepage_text_2 }}
             </div>
         </li>
 
