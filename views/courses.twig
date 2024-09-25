@@ -10,8 +10,8 @@
                 <div class="c-blog-card__image">
                     <img src="{{ course.image.url }}">
                 </div>
-                <div class="c-blog-card__date">Lorem ipsum</div>
                 <div class="c-blog-card__title">{{ course }}</div>
+                <div class="c-blog-card__date">{{ course.description }}</div>
             </a>
             {% endfor %}
         </div>
