@@ -13,7 +13,7 @@ if(isset($_POST['_token']))
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $mailbody = $_POST['mailbody'];
-        $to = 'mattijs@functioneelwit.nl';
+        $to = 'info@redvice.eu';
         $subject = 'Een bericht van ' . $name . ' via het contactformulier op redvice.eu';
         $body = "Naam: $name\nBedrijf: $companyname\nE-mailadres: $email\nTelefoonnummer: $phone\n\n$mailbody";
         wp_mail($to, $subject, $body);
