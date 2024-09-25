@@ -6,7 +6,7 @@
         <div class="s-blogs__grid u-mb">
 
             {% for course in courses %}
-            <a href="" class="c-blog-card">
+            <a href="{{ course.url }}" class="c-blog-card">
                 <div class="c-blog-card__image">
                     <img src="{{ course.image.url }}">
                 </div>
