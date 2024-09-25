@@ -28,7 +28,7 @@ function my_register_post_type_course()
 
                 'rewrite' => [
 
-                    'slug' => 'course',
+                    'slug' => 'training',
                     'with_front' => false,
                     'feeds' => false
 
