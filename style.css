@@ -255,7 +255,7 @@ strong {
   color: white;
 }
 .c-button.\--green {
-  background-color: #3da916;
+  background-color: #4d9d2f;
   color: white;
 }
 .c-button.\--red {
@@ -467,7 +467,7 @@ strong {
 }
 .c-heading.\--medium {
   font-size: 16px;
-  color: #00ADEE;
+  color: #4d9d2f;
 }
 @media only screen and (max-width: 659px) {
   .c-heading.\--xxxl {
@@ -2546,6 +2546,9 @@ html .note-fullscreen-body, body .note-fullscreen-body {
   text-align: left;
   display: inline-block;
 }
+.s-contact-page__phone-number svg, .s-contact-page__e-mail-address svg {
+  fill: #4d9d2f;
+}
 .s-contact-page__phone-number {
   background-image: url("/wp-content/themes/redvice/images/icons/phone-blue.svg");
   background-repeat: no-repeat;
@@ -2595,7 +2598,7 @@ html .note-fullscreen-body, body .note-fullscreen-body {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #CEEEFF;
+  color: #4d9d2f;
   text-transform: uppercase;
 }
 .s-footer__title {
@@ -3310,7 +3313,7 @@ html .note-fullscreen-body, body .note-fullscreen-body {
   text-align: center;
 }
 .u-text-color--green {
-  color: #3da916;
+  color: #4d9d2f;
 }
 .u-text-color--gold {
   color: #efc42e;
