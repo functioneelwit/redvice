@@ -14,8 +14,8 @@ if(isset($_POST['_token']))
         $phone = $_POST['phone'];
         $mailbody = $_POST['mailbody'];
         $to = 'mattijs@functioneelwit.nl';
-        $subject = 'Contact Form Submission';
-        $body = "Name: $name\nBedrijf: $companyname\nEmail: $email\nTelefoonnummer: $phone\n\n$mailbody";
+        $subject = 'Een bericht van ' . $name . ' via het contactformulier op redvice.eu';
+        $body = "Naam: $name\nBedrijf: $companyname\nE-mailadres: $email\nTelefoonnummer: $phone\n\n$mailbody";
         wp_mail($to, $subject, $body);
         $_SESSION['contact_message_send'] = 1;
     }
