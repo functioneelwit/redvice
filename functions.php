@@ -4,13 +4,25 @@
  * https://github.com/timber/starter-theme
  */
 
-if(strpos($_SERVER['REQUEST_URI'],'doneer-nu')){
-    $donateUrl = get_field('donate_url', 'options');
-    if($donateUrl) {
-        header("Location: ".$donateUrl);
-        exit();
+
+if(isset($_POST['token']))
+{
+    if(isset($_POST['token']) && $_POST['token'] == $_SESSION['token']) {
+        $name = $_POST['name'];
+        $companyname = $_POST['companyname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $mailbody = $_POST['mailbody'];
+        $to = 'mattijs@functioneelwit.nl';
+        $subject = 'Contact Form Submission';
+        $body = "Name: $name\nBedrijf: $companyname\nEmail: $email\nTelefoonnummer: $phone\n\n$mailbody";
+        wp_mail($to, $subject, $body);
+        $_SESSION['contact_message_send'] = 1;
     }
+    header("Location: /contact");
+    exit;
 }
+
 
 // Load Composer dependencies.
 require_once __DIR__ . '/vendor/autoload.php';

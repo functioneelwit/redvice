@@ -22,8 +22,13 @@
             </p>
         </div>
         <div class="s-contact-page__form u-mb+">
+            {% if contact_message_send %}
+                <div class="c-alert --success u-mb">
+                    Uw bericht is verzonden. Hartelijk dank voor uw interesse.
+                </div>
+            {% else %}
             <form role="form" method="POST" id="contact-form" enctype="multipart/form-data" action="">
-                <input type="hidden" name="_token" value="Jx2NiAZIAWzv07X9bg9DJRrzYTekzQq0ichrdGkD" autocomplete="off">
+                <input type="hidden" name="_token" value="{{ token }}" autocomplete="off">
                 <div class="s-contact-page__form-grid">
                     <label class="c-label">Naam *</label>
                     <input class="c-input --small" name="name" type="text" value="" required>
@@ -43,9 +48,8 @@
                     <div></div>
                     <button class="c-button --large --light-blue" type="submit">Verstuur</button>
                 </div>
-
-
             </form>
+            {% endif %}
         </div>
 
 

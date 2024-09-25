@@ -27,12 +27,26 @@
 
     $templates = ['page.twig'];
     
+    
+    
     if ( is_front_page() ) {
         $context['home'] = true;
         array_unshift($templates, 'home.twig');
     }
     elseif (is_page('contact')) {
+
+        $token = md5(uniqid(rand(), true));
+        $_SESSION['token'] = $token;
+        $context['token'] = $token;
+        if(isset($_SESSION['contact_message_send']) && $_SESSION['contact_message_send'] == 1) {
+            $context['contact_message_send'] = 1;
+        }
+        unset($_SESSION['contact_message_send']);
         array_unshift($templates, 'contact.twig');
+        
+        echo '<pre>';
+        var_dump($_SESSION);
+        echo '</pre>';
     }
 
     Timber::render($templates, $context);
