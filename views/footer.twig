@@ -43,7 +43,7 @@
                     <ul class="s-footer__links u-mb+">
                         {% for course in courses %}
                             <li>
-                                <a href="">
+                                <a href="{{ course.link }}">
                                     {{ course }}
                                 </a>
                             </li>
@@ -56,7 +56,12 @@
     </div>
     <div class="s-footer__sub">
         <div class="l-wrapper">
-            <p class="u-text-center">© Copyright 2015 -  Redvice</p>
+            <p class="u-text-center">
+                © Copyright 2015 -  Redvice
+                | <a href="/disclaimer">Disclaimer</a>
+                | <a href="/privacy-statement">Privacy</a>
+                | <a href="/algemene-voorwaarden-redvice">Algemene voorwaarden</a>
+            </p>
         </div>
     </div>
 </footer>

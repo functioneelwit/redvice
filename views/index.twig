@@ -1,11 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
+<div>
     {% include 'header.twig' %}
-    {% include 'home-hero.twig' %}
-    {% include 'quote.twig' %}
-    {% include 'employers.twig' %}
-    {% include 'courses.twig' %}
+</div>
+<div class="l-wrapper u-p" style="padding-top: 150px;">
 
+    <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+        <h1>{{ post.title }}</h1>
+        {{ post.content }}
+    </article>
+</div>
 {% endblock %}
