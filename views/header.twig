@@ -1,49 +1,48 @@
-<header class="s-header ">
-	<div class="l-wrapper">
-		<div class="s-header__wrapper">
-			<div class="s-header__hamburger">
-				<button class="s-hamburger" @click="showMobileMenu = true">
-					<img src="https://www.redvice.eu/dist/img/hamburger.svg">
-				</button>
-			</div>
-			<a href="/">
-				<img class="s-header__logo" src="{{ theme.uri }}/images/redvice_logo.png">
-			</a>
-
-			<ul class="s-header__menu">
-				<li>
-					<a href="https://www.redvice.eu/vacatures"
-					   class="s-header__menu-item"
-					>
-						Vacatures
-					</a>
-				</li>
-				<li>
-					<a href="https://www.redvice.eu/voor-werkgevers"
-					   class="s-header__menu-item"
-					>
-						Bedrijven
-					</a>
-				</li>
-				<li>
-					<a href="https://www.redvice.eu/contact"
-					   class="s-header__menu-item "
-					>
-						Contact
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<header class="s-header{% if home is null %} --with-border {% endif %}">
+    <div class="l-wrapper">
+        <div class="s-header__wrapper">
+            <div class="s-header__hamburger">
+                <button class="s-hamburger">
+                    <img src="https://www.redvice.eu/dist/img/hamburger.svg">
+                </button>
+            </div>
+            <a href="/">
+                <img class="s-header__logo{% if home is defined %} --wrapped {% endif %}" src="{{ theme.uri }}/images/redvice_logo.png">
+            </a>
+            <ul class="s-header__menu">
+                <li>
+                    <a href="https://www.redvice.eu/vacatures"
+                       class="s-header__menu-item"
+                    >
+                        Vacatures
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.redvice.eu/voor-werkgevers"
+                       class="s-header__menu-item"
+                    >
+                        Bedrijven
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.redvice.eu/contact"
+                       class="s-header__menu-item "
+                    >
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <div class="s-mobile-menu" :class="{'--enabled': showMobileMenu }">
-	<a class="s-mobile-menu__link" href="/">Home</a>
-	<a class="s-mobile-menu__link" href="https://www.redvice.eu/vacatures">Vacatures</a>
-	<a class="s-mobile-menu__link" href="https://www.redvice.eu/voor-werkgevers">Voor werkgevers</a>
-	<a class="s-mobile-menu__link" href="https://www.redvice.eu/contact">Contact</a>
-	<button class="s-mobile-menu__link --account" @click="toggleAccountDropdown()">Account</button>
-	<button class="s-mobile-menu__close" @click="showMobileMenu = false">
-		<img src="https://www.redvice.eu/dist/img/icons/cross-white.svg">
-	</button>
+    <a class="s-mobile-menu__link" href="/">Home</a>
+    <a class="s-mobile-menu__link" href="https://www.redvice.eu/vacatures">Vacatures</a>
+    <a class="s-mobile-menu__link" href="https://www.redvice.eu/voor-werkgevers">Voor werkgevers</a>
+    <a class="s-mobile-menu__link" href="https://www.redvice.eu/contact">Contact</a>
+    <button class="s-mobile-menu__link --account" @click="toggleAccountDropdown()">Account</button>
+    <button class="s-mobile-menu__close" @click="showMobileMenu = false">
+        <img src="https://www.redvice.eu/dist/img/icons/cross-white.svg">
+    </button>
 </div>

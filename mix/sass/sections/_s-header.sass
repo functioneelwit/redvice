@@ -24,16 +24,19 @@
 
 	&__logo
 		display: block
-		padding: 30px 15px 15px 20px
-		background: white
-		border-radius: 0 0 30px 10px
-		+box-shadow
 
 		+mobile
 			width: 120px
 
 		+tablet-desktop
+			width: 200px
+
+		&.\--wrapped
 			width: 240px
+			padding: 30px 15px 15px 20px
+			background: white
+			border-radius: 0 0 30px 10px
+			+box-shadow
 
 	&__menu
 		+mobile
@@ -75,5 +78,5 @@
 
 	&.\--with-border
 		position: relative
-		border-bottom: 6px solid $dark-blue
+		border-bottom: 6px solid $dark-green
 		background-color: $main-bg-color

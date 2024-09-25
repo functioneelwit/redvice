@@ -571,10 +571,8 @@ strong {
   font-size: inherit;
 }
 
-.c-popup {
-  background: white;
-  position: absolute;
-  z-index: 999;
+p {
+  margin-bottom: 20px;
 }
 
 .c-search {
@@ -2656,10 +2654,6 @@ html .note-fullscreen-body, body .note-fullscreen-body {
 }
 .s-header__logo {
   display: block;
-  padding: 30px 15px 15px 20px;
-  background: white;
-  border-radius: 0 0 30px 10px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
 }
 @media only screen and (max-width: 659px) {
   .s-header__logo {
@@ -2668,8 +2662,15 @@ html .note-fullscreen-body, body .note-fullscreen-body {
 }
 @media only screen and (min-width: 660px) {
   .s-header__logo {
-    width: 240px;
+    width: 200px;
   }
+}
+.s-header__logo.\--wrapped {
+  width: 240px;
+  padding: 30px 15px 15px 20px;
+  background: white;
+  border-radius: 0 0 30px 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
 }
 @media only screen and (max-width: 659px) {
   .s-header__menu {
@@ -2718,7 +2719,7 @@ html .note-fullscreen-body, body .note-fullscreen-body {
 }
 .s-header.\--with-border {
   position: relative;
-  border-bottom: 6px solid #004563;
+  border-bottom: 6px solid #002500;
   background-color: white;
 }
 
