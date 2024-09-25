@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="s-contact-page">
+    <div class="l-wrapper --small">
+        <h1 class="c-heading --xxxl u-mb">Contact</h1>
+
+        <div class="c-paragraph --medium u-mb">
+            <p class="c-paragraph u-mb">Heb je interesse in onze werkwijze en wil je dat wij contact met jou opnemen?</p><p class="c-paragraph u-mb">Vul dan het contactformulier in en we nemen zo spoedig mogelijk contact op.</p>
+
+        </div>
+
+        <div>
+            <p class="s-contact-page__phone-number">
+                <a href="tel:+31653769999">06 5376 9999</a>
+            </p>
+
+            <p class="s-contact-page__e-mail-address u-mb+">
+                <a href="mailto:info@redvice.eu">
+                    info@redvice.eu
+                </a>
+            </p>
+        </div>
+        <div class="s-contact-page__form u-mb+">
+            <form role="form" method="POST" id="contact-form" enctype="multipart/form-data" action="">
+                <input type="hidden" name="_token" value="Jx2NiAZIAWzv07X9bg9DJRrzYTekzQq0ichrdGkD" autocomplete="off">
+                <div class="s-contact-page__form-grid">
+                    <label class="c-label">Naam *</label>
+                    <input class="c-input --small" name="name" type="text" value="" required>
+
+                    <label class="c-label">Bedrijf</label>
+                    <input class="c-input --small" name="companyname" type="text" value="">
+
+                    <label class="c-label">E-mailadres*</label>
+                    <input class="c-input --small" name="email" type="email" value="" required>
+
+                    <label class="c-label">Telefoonnummer</label>
+                    <input class="c-input --small" name="phone" type="tel" value="" minlength="10" maxlength="15">
+
+                    <p>Vul hier je vraag in</p>
+                    <textarea class="c-textarea" id="mailbody" name="mailbody"></textarea>
+
+                    <div></div>
+                    <button class="c-button --large --light-blue" type="submit">Verstuur</button>
+                </div>
+
+
+            </form>
+        </div>
+
+
+        <div>
+            <h4 class="c-heading --medium --uppercase">Adres</h4>
+
+            <p class="u-mb">
+                Stadsweg 91<br>
+                9791 KC, TEN BOER<br>
+                Nederland
+            </p>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

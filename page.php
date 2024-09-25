@@ -30,7 +30,9 @@
     if ( is_front_page() ) {
         $context['home'] = true;
         array_unshift($templates, 'home.twig');
-        
+    }
+    elseif (is_page('contact')) {
+        array_unshift($templates, 'contact.twig');
     }
 
     Timber::render($templates, $context);
