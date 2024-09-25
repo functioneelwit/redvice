@@ -4,10 +4,10 @@
  * https://github.com/timber/starter-theme
  */
 
-
-if(isset($_POST['token']))
+if(isset($_POST['_token']))
 {
-    if(isset($_POST['token']) && $_POST['token'] == $_SESSION['token']) {
+    session_start();
+    if(isset($_POST['_token']) && $_POST['_token'] == $_SESSION['token']) {
         $name = $_POST['name'];
         $companyname = $_POST['companyname'];
         $email = $_POST['email'];
@@ -23,12 +23,9 @@ if(isset($_POST['token']))
     exit;
 }
 
-
 // Load Composer dependencies.
 require_once __DIR__ . '/vendor/autoload.php';
-
 require_once __DIR__ . '/src/StarterSite.php';
-
 include_once(get_stylesheet_directory() . '/src/wp-custom-post-type-client.php');
 include_once(get_stylesheet_directory() . '/src/wp-custom-post-type-course.php');
 

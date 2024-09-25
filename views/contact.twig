@@ -3,6 +3,12 @@
 {% block content %}
 <div class="s-contact-page">
     <div class="l-wrapper --small">
+        {% if contact_message_send %}
+        <h1 class="c-heading --xxxl u-mb">Bericht verzonden</h1>
+        <div class="c-paragraph --medium u-mb">
+            <p class="c-paragraph u-mb">Uw bericht is verzonden. Hartelijk dank voor uw interesse. We nemen zo spoedig mogelijk contact met u op.</p>
+        </div>
+        {% else %}
         <h1 class="c-heading --xxxl u-mb">Contact</h1>
 
         <div class="c-paragraph --medium u-mb">
@@ -22,11 +28,7 @@
             </p>
         </div>
         <div class="s-contact-page__form u-mb+">
-            {% if contact_message_send %}
-                <div class="c-alert --success u-mb">
-                    Uw bericht is verzonden. Hartelijk dank voor uw interesse.
-                </div>
-            {% else %}
+
             <form role="form" method="POST" id="contact-form" enctype="multipart/form-data" action="">
                 <input type="hidden" name="_token" value="{{ token }}" autocomplete="off">
                 <div class="s-contact-page__form-grid">
@@ -49,7 +51,7 @@
                     <button class="c-button --large --light-blue" type="submit">Verstuur</button>
                 </div>
             </form>
-            {% endif %}
+
         </div>
 
 
@@ -63,6 +65,7 @@
             </p>
 
         </div>
+        {% endif %}
     </div>
 </div>
 
