@@ -48,11 +48,7 @@
             "preview_size": "medium"
         },
         {
-<<<<<<< HEAD
-            "key": "field_66f3ea0fff740",
-=======
             "key": "field_66f3bc4f451df",
->>>>>>> 375fc97 (act updates)
             "label": "Inhoud",
             "name": "html_content",
             "aria-label": "",
@@ -66,10 +62,7 @@
                 "id": ""
             },
             "default_value": "",
-<<<<<<< HEAD
-=======
             "allow_in_bindings": 0,
->>>>>>> 375fc97 (act updates)
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -94,9 +87,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-<<<<<<< HEAD
     "modified": 1727261290
 }
-=======
-    "modified": 17272613
->>>>>>> 375fc97 (act updates)
