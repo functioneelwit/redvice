@@ -122,6 +122,11 @@ strong {
 .l-wrapper article {
   padding-top: 60px;
 }
+.l-wrapper article ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 .l-wrapper article h1 {
   font-size: 41px;
   margin-bottom: 20px;
