@@ -122,6 +122,20 @@ strong {
 .l-wrapper article {
   padding-top: 60px;
 }
+.l-wrapper article h1 {
+  font-size: 41px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 660px) and (max-width: 1059px) {
+  .l-wrapper article h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 659px) {
+  .l-wrapper article h1 {
+    font-size: 26px;
+  }
+}
 .l-wrapper article a {
   text-decoration: underline;
   color: #4d9d2f;
