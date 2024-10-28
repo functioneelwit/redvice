@@ -6,14 +6,12 @@
         <div class="s-interesting-employers__grid u-mb+">
             {% for client in clients %}
             <div>
-                <a href="">
-                    <div class="s-interesting-employers__logo">
-                        <img loading="lazy" src="{{ client.logo.url }}">
-                    </div>
-                    <div class="s-interesting-employers__company">
-                        <b>{{ client }}</b><br>
-                    </div>
-                </a>
+                <div class="s-interesting-employers__logo">
+                    <img loading="lazy" src="{{ client.logo.url }}">
+                </div>
+                <div class="s-interesting-employers__company">
+                    <b>{{ client }}</b><br>
+                </div>
             </div>
             {% endfor %}
         </div>
