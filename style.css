@@ -119,6 +119,9 @@ strong {
 .l-wrapper.\--medium {
   max-width: 1035px;
 }
+.l-wrapper article {
+  padding-top: 60px;
+}
 .l-wrapper article a {
   text-decoration: underline;
   color: #4d9d2f;
