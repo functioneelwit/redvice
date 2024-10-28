@@ -1,3 +1,11 @@
 {% extends "base.twig" %}
 
-{% include "page.twig" %}
+{% block content %}
+    <div class="l-wrapper --small u-p">
+    <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+        <h1>{{ post.title }}</h1>
+        {{ post.html_content }}
+        {{ post.content }}
+    </article>
+    </div>
+{% endblock %}
