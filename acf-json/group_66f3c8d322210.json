@@ -92,7 +92,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "url",
+                    "allow_in_bindings": 1
                 }
             ]
         },
@@ -177,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727253764
+    "modified": 1730301721
 }
